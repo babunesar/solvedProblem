@@ -11,3 +11,19 @@ function addNewNum(ary, index, number) {
     return ary;
 }
 console.log(addNewNum(arr, 3, 33));
+
+let tr = [2, 55, 60, 70211, 86];
+function checkSeven(input) {
+    let temp = 0;
+    for (i = 0; i < tr.length; i++) {
+        temp = tr[i];
+        while (temp > 0) {
+            if (temp % 10 == 7) {
+                return 'Seven Here';
+            }
+            temp = Math.floor(temp /= 10);
+        }
+    }
+    return 'Seven Not Here';
+}
+console.log(checkSeven(tr));
