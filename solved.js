@@ -27,3 +27,23 @@ function checkSeven(input) {
     return 'Seven Not Here';
 }
 console.log(checkSeven(tr));
+
+let common = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+function mostFrequentItem(input) {
+    let frequentItem = input[0];
+    let check = 0;
+    for (const item of input) {
+        let count = 0;
+        for (const secondItem of input) {
+            if (item == secondItem) {
+                count++;
+            }
+        }
+        if (count > check) {
+            check = count;
+            frequentItem = item;
+        }
+    }
+    return frequentItem;
+}
+console.log(mostFrequentItem(common));
