@@ -1,5 +1,4 @@
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 function addNewNum(ary, index, number) {
     ary[ary.length] = undefined;
     var a = ary.length - 2;
@@ -47,3 +46,23 @@ function mostFrequentItem(input) {
     return frequentItem;
 }
 console.log(mostFrequentItem(common));
+
+// leetcode Problem
+let arr2 = [2, 3, 4, 7, 10];
+let arr3 = [];
+let a = 0;
+let b = 0;
+const k = 5;
+let stop = arr.length + k;
+for (let i = 1; i <= stop; i++) {
+    if (i != arr2[a]) {
+        arr3[b] = i;
+        b++;
+    } else {
+        a++;
+    }
+}
+for (let index = 0; index < k; index++) {
+    var element = arr3[index];
+}
+console.log(element);
